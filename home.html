@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VSEND prototype</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F7F5F0;color:#1E2622;zoom:.75;}a{color:#1E4A40;}a:hover{color:#1E2622;}</style>
+</helmet>
+<div style="font-family:'Public Sans',sans-serif;min-height:calc(100vh / .75);display:flex;flex-direction:column;align-items:center;padding:64px 24px 96px;box-sizing:border-box;">
+<div style="width:100%;max-width:880px;display:flex;flex-direction:column;gap:40px;">
+<div style="display:flex;align-items:center;gap:14px;">
+<svg width="56" height="56" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#F0A000" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;transform-origin:50px 50px;transform-box:view-box;"></path></svg>
+<div style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;letter-spacing:-.01em;">vsend</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;">
+<h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:36px;line-height:42px;margin:0;">Prototype pages</h1>
+<p style="margin:0;font-size:19px;line-height:27px;color:#5A5F58;max-width:640px;">Click through from any page using the sidebar. Two views of the home dashboard exist, one for the SENCo and one for a class teacher.</p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;">
+<h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;margin:0;">Home dashboard</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+<a href="VSEND Home.dc.html" style="display:flex;flex-direction:column;gap:6px;padding:20px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#1E2622;"><span style="font-family:'Source Serif 4',serif;font-size:22px;line-height:28px;font-weight:600;">SENCo view</span><span style="font-size:16px;line-height:22px;color:#5A5F58;">Signed in as Nadiya Philips. Whole-school register, readiness, calendar and what needs her today.</span><span style="margin-top:6px;font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></a>
+<a href="VSEND Teacher Home.dc.html" style="display:flex;flex-direction:column;gap:6px;padding:20px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#1E2622;"><span style="font-family:'Source Serif 4',serif;font-size:22px;line-height:28px;font-weight:600;">Teacher view</span><span style="font-size:16px;line-height:22px;color:#5A5F58;">Signed in as Rebecca Mensah, Year 4. Her class, her actions, progress against targets and messages from the SENCo.</span><span style="margin-top:6px;font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></a>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;">
+<h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;margin:0;">Pages</h2>
+<div style="display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:4px 20px;">
+<a href="VSEND Setting Readiness.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Setting readiness</span><span style="color:#5A5F58;">Whole-setting scores across the five areas, radar with previous versions, and the full provision map by stage, filterable by key stage and editable.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+<a href="VSEND Restyled v2.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Children &amp; Young People</span><span style="color:#5A5F58;">The register, search, add a child.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+<a href="VSEND Restyled v2.dc.html#add" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Add a child</span><span style="color:#5A5F58;">Autocomplete from the school roll.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 20 Oct 2026</span></span></a>
+<a href="VSEND Restyled v2.dc.html#build" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Build a profile</span><span style="color:#5A5F58;">Free text, sources, upload, level of need, then review scores and the drafted profile.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+<a href="VSEND Child Page.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Child profile</span><span style="color:#5A5F58;">Amara Okafor. Personal details, parent/guardian, needs radar, plan, share, history.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+<a href="VSEND Learning Plan.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Learning plan</span><span style="color:#5A5F58;">Amara's agreed plan: targets, provision, progress log, review, share.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+<a href="VSEND Create Plan.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Create a plan</span><span style="color:#5A5F58;">Check the profile, setting readiness, strategies with costs and peer comparison, review.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+<a href="VSEND Transitions.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid #DDD6C9;text-decoration:none;color:#1E2622;font-size:16px;line-height:22px;"><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;font-size:19px;">Transitions</span><span style="color:#5A5F58;">Children joining, moving, transferring phase or leaving.</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap;"><span style="color:#1E4A40;font-weight:600;">Open</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">Updated 21 Oct 2026</span></span></a>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  sunRef = React.createRef();
+  sunColours = ['#F0A000','#4F8BE0','#E0584A','#3FA885','#EE7A3C','#9A6ED4'];
+  sunIdx = 0; sunRunning = false; sunLoop = null; sunToken = 0;
+  sunAnim(from, to) {
+    const p = this.sunRef.current; if (!p) return Promise.resolve();
+    const a = p.animate([{ strokeDashoffset: from }, { strokeDashoffset: to }], { duration: 5000, easing: 'linear', fill: 'forwards' });
+    return a.finished.then(() => { p.style.strokeDashoffset = to; a.cancel(); }, () => {});
+  }
+  startSun() {
+    if (this.sunRunning) return;
+    this.sunRunning = true;
+    const token = ++this.sunToken;
+    const prev = this.sunLoop || Promise.resolve();
+    this.sunLoop = prev.then(async () => {
+      while (token === this.sunToken && this.sunRunning) {
+        await this.sunAnim(0, -1);
+        this.sunIdx = (this.sunIdx + 1) % this.sunColours.length;
+        if (this.sunRef.current) this.sunRef.current.setAttribute('stroke', this.sunColours[this.sunIdx]);
+        await this.sunAnim(1, 0);
+      }
+    });
+  }
+  stopSun() { this.sunRunning = false; this.sunToken++; }
+  componentDidMount() {
+    const reset = () => { this.stopSun(); clearTimeout(this._idleT); this._idleT = setTimeout(() => this.startSun(), 7000); };
+    this._reset = reset;
+    ['mousemove','keydown','pointerdown','scroll','touchstart'].forEach(e => window.addEventListener(e, reset, { passive: true }));
+    reset();
+  }
+  componentWillUnmount() {
+    clearTimeout(this._idleT);
+    ['mousemove','keydown','pointerdown','scroll','touchstart'].forEach(e => window.removeEventListener(e, this._reset));
+  }
+  renderVals() { return { sunRef: this.sunRef }; }
+}
+</script>
+</body>
+</html>
