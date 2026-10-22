@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F7F5F0;color:#1E2622;zoom:.75;}a{color:#1E4A40;}a:hover{color:#1E2622;}@media (max-width:1023px){div[style*="columns: 310px"],div[style*="columns:310px"]{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto minmax(0,1fr)!important;}header[style*="columns: 310px"],header[style*="columns:310px"]{grid-template-columns:auto minmax(0,1fr)!important;grid-column:1!important;}aside,main{grid-column:1!important;}header[style*="columns: 310px"],header[style*="columns:310px"]{height:auto!important;padding:24px 0!important;row-gap:12px;}header>div:first-child{height:auto!important;}header>div:last-child{padding:0 20px!important;height:auto!important;flex-wrap:wrap;}aside{position:static!important;height:auto!important;margin-bottom:0!important;}aside>div:first-child{flex-direction:row!important;flex-wrap:wrap;padding:8px 12px!important;font-size:16px!important;line-height:20px!important;}aside>div:first-child a{padding:8px 12px!important;}main{padding:24px 20px 64px!important;}main div[style*="3fr"]{grid-template-columns:minmax(0,1fr)!important;}}@media (max-width:639px){header span[style*="nowrap"]{display:none!important;}main{padding:20px 16px 56px!important;}}header[style*="columns: 310px"]::after,header[style*="columns:310px"]::after{content:"";position:absolute;left:50%;bottom:-1px;width:calc(100vw / .75);transform:translateX(-50%);border-bottom:1px solid #B5AE9F;pointer-events:none;}</style>
+</helmet>
+
+<div style="font-family:'Public Sans',sans-serif;display:grid;grid-template-columns:310px minmax(0,1fr);grid-template-rows:80px minmax(0,1fr);min-height:calc(100vh / .75);box-sizing:border-box;max-width:calc(1080px / .75);margin:0 auto;">
+
+<header style="grid-column:1/3;display:grid;grid-template-columns:310px minmax(0,1fr);align-items:center;box-sizing:border-box;background:#F7F5F0;position:relative;z-index:2;">
+<div style="display:flex;align-items:center;gap:10px;padding-left:24px;min-width:max-content;padding-right:24px;height:44px;">
+<svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#F0A000" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg>
+<div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;white-space:nowrap;">vsend</div>
+</div>
+<div style="padding:0 48px;min-width:0;"><div style="display:flex;align-items:center;justify-content:flex-end;gap:16px;font-size:16px;line-height:20px;color:#1E2622;height:44px;">
+<button type="button" aria-label="Search" onClick="{{ openSearch }}" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:0;border-radius:6px;background:transparent;color:#1E2622;cursor:pointer;padding:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></button>
+<span style="white-space:nowrap;">Signed in as <strong style="color:#1E2622;font-weight:600;">Nadiya Philips</strong></span>
+<a href="#" style="padding:7px 14px;border:2px solid #1E2622;border-radius:6px;text-decoration:none;color:#1E2622;background:transparent;font-weight:600;line-height:20px;">Log out</a>
+</div></div>
+</header>
+<sc-if value="{{ agreeOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Agree learning plan" style="position:fixed;inset:0;z-index:60;overflow:auto;background:#F7F5F0;color:#1E2622;font-family:'Public Sans',sans-serif;">
+<div style="max-width:960px;margin:0 auto;padding:0 48px;"><div style="height:80px;display:flex;align-items:center;gap:10px;"><svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef4 }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#1E2622" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg><div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;">vsend</div></div></div>
+<div style="max-width:960px;margin:0 auto;padding:24px 48px 96px;display:flex;flex-direction:column;gap:28px;">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">
+<div style="display:flex;flex-direction:column;gap:6px;"><h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;margin:0;">Agree {{ first }}'s learning plan</h2><div style="font-size:16px;line-height:22px;color:#5A5F58;">Set when the plan is reviewed and who needs to sign it off. The plan stays a draft until everyone listed has agreed.</div></div>
+<button type="button" onClick="{{ closeAgree }}" aria-label="Close" style="display:flex;align-items:center;gap:6px;border:0;background:transparent;font:inherit;font-size:16px;line-height:20px;font-weight:600;color:#1E2622;cursor:pointer;padding:6px 0;">Close<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+
+<sc-if value="{{ agreeDone }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Sent for sign-off</div>
+<div style="font-size:16px;line-height:22px;color:#5A5F58;">{{ agreeDoneLine }} The plan will show as agreed on {{ child.name }}'s profile once everyone has signed.</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="{{ profileHref }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#FFFFFF;background:#1E4A40;font-weight:600;font-size:16px;line-height:20px;">Back to {{ first }}'s profile</a><button type="button" onClick="{{ closeAgree }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#1E4A40;background:#FFFFFF;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">Stay on the plan</button></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ agreeForm }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start;">
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Review date</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<sc-for list="{{ reviewPresets }}" as="p" hint-placeholder-count="3">
+<button type="button" onClick="{{ p.pick }}" style="padding:8px 14px;border:2px solid {{ p.border }};border-radius:999px;background:{{ p.bg }};color:#1E2622;font:inherit;font-size:16px;line-height:20px;font-weight:600;cursor:pointer;">{{ p.label }}</button>
+</sc-for>
+</div>
+<label style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:20px;font-weight:600;">Or choose a date
+<input type="date" value="{{ agreeReviewDate }}" onChange="{{ onAgreeReviewDate }}" style="box-sizing:border-box;border:2px solid #1E2622;border-radius:8px;height:48px;padding:0 14px;font:inherit;font-size:16px;color:#1E2622;background:#FFFFFF;outline:0;max-width:280px;">
+</label>
+<div style="font-size:16px;line-height:20px;color:#5A5F58;border-top:1px solid #DDD6C9;padding-top:12px;">{{ reviewNote }}</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Who needs to sign off</div><span style="font-size:16px;line-height:20px;color:#5A5F58;">{{ signCount }}</span></div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ signers }}" as="s" hint-placeholder-count="4">
+<label style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 12px;margin:0 -12px;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;cursor:pointer;background:{{ s.bg }};border-radius:6px;">
+<input type="checkbox" checked="{{ s.on }}" onChange="{{ s.toggle }}" disabled="{{ s.locked }}" style="width:22px;height:22px;margin:0;accent-color:#1E4A40;">
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:600;color:#1E2622;">{{ s.title }}</span><span style="color:#5A5F58;">{{ s.detail }}</span></div>
+<sc-if value="{{ s.locked }}" hint-placeholder-val="{{ false }}"><span style="padding:4px 10px;border-radius:999px;font-weight:600;font-size:14px;line-height:18px;background:#E3EDE9;color:#1E4A40;white-space:nowrap;">You</span></sc-if>
+</label>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:2px solid #1E4A40;padding-top:20px;">
+<div style="font-size:16px;line-height:20px;color:#5A5F58;">{{ agreeSummary }}</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;"><button type="button" onClick="{{ closeAgree }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#1E4A40;background:#FFFFFF;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">Cancel</button><button type="button" onClick="{{ confirmAgree }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#FFFFFF;background:#1E4A40;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">Agree and send for sign-off</button></div>
+</div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ shareOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Share plan" style="position:fixed;inset:0;z-index:60;overflow:auto;background:linear-gradient(160deg,#F2B78A 0%,#FBE3CF 10%,#EEA66F 20%,#F8D8BC 30%,#F4C59E 40%,#FCEBDC 50%,#EEA66F 60%,#F8D8BC 70%,#F4C59E 80%,#FBE3CF 90%,#F2B78A 100%);background-size:400% 400%;padding:0 0 40px;box-sizing:border-box;font-family:'Public Sans',sans-serif;color:#1E2622;">
+<div style="max-width:960px;margin:0 auto;padding:0 48px;"><div style="height:80px;display:flex;align-items:center;gap:10px;"><svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef3 }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#1E2622" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg><div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;">vsend</div></div></div>
+<div style="max-width:960px;margin:0 auto;padding:24px 48px 96px;display:flex;flex-direction:column;gap:28px;">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">
+<div style="display:flex;flex-direction:column;gap:6px;"><h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;margin:0;">Share {{ first }}'s plan</h2><div style="font-size:16px;line-height:22px;color:#5A5F58;">Anyone with the link can open the plan. Choose what they can see and when the link stops working.</div></div>
+<button type="button" onClick="{{ closeShare }}" aria-label="Close share" style="display:flex;align-items:center;gap:6px;border:0;background:transparent;font:inherit;font-size:16px;line-height:20px;font-weight:600;color:#1E2622;cursor:pointer;padding:6px 0;">Close<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<div style="font-size:19px;line-height:25px;font-weight:600;">Who is this for?</div>
+<div style="display:flex;flex-direction:column;gap:8px;">
+<sc-for list="{{ shareAudiences }}" as="a" hint-placeholder-count="4">
+<label style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:12px 14px;border:2px solid {{ a.border }};border-radius:6px;background:#FFFFFF;cursor:pointer;">
+<input type="radio" name="share-aud" checked="{{ a.on }}" onChange="{{ a.pick }}" style="width:20px;height:20px;margin:2px 0 0;accent-color:#1E4A40;">
+<span style="display:flex;flex-direction:column;gap:2px;font-size:16px;line-height:20px;"><span style="font-weight:600;">{{ a.title }}</span><span style="color:#5A5F58;">{{ a.detail }}</span></span>
+</label>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<div style="font-size:19px;line-height:25px;font-weight:600;">What they can see</div>
+<div style="display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #1E2622;border-radius:6px;padding:4px 14px;">
+<sc-for list="{{ sharePerms }}" as="pm" hint-placeholder-count="5">
+<label style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;cursor:pointer;">
+<span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;color:{{ pm.fg }};">{{ pm.title }}</span><span style="color:#5A5F58;">{{ pm.detail }}</span></span>
+<input type="checkbox" checked="{{ pm.on }}" disabled="{{ pm.locked }}" onChange="{{ pm.toggle }}" style="width:22px;height:22px;margin:0;accent-color:#1E4A40;">
+</label>
+</sc-for>
+</div>
+<div style="font-size:14px;line-height:20px;color:#5A5F58;">Date of birth, child ID and contact details are never included in a shared link.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:16px;line-height:20px;font-weight:600;">Link expires<select value="{{ shareExpiry }}" onChange="{{ onShareExpiry }}" style="font:inherit;font-weight:400;padding:9px 12px;border:2px solid #1E2622;border-radius:6px;background:#FFFFFF;color:#1E2622;"><option value="7">In 7 days</option><option value="30">In 30 days</option><option value="90">At the next review (90 days)</option></select></label>
+<label style="display:flex;align-items:center;gap:12px;align-self:end;padding:9px 0;font-size:16px;line-height:20px;cursor:pointer;"><input type="checkbox" checked="{{ sharePasscode }}" onChange="{{ toggleSharePasscode }}" style="width:22px;height:22px;margin:0;accent-color:#1E4A40;">Require a passcode sent by text</label>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<label for="share-email" style="font-size:19px;line-height:25px;font-weight:600;">Send to</label>
+<div style="font-size:16px;line-height:20px;color:#5A5F58;">The link is tied to this address. If the passcode is on, it is texted to the number on file.</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<input id="share-email" type="email" value="{{ shareEmail }}" onChange="{{ onShareEmail }}" placeholder="name@example.com" style="flex:1;min-width:220px;font:inherit;font-size:16px;padding:9px 12px;border:2px solid #1E2622;border-radius:6px;background:#FFFFFF;color:#1E2622;outline:0;">
+<button type="button" onClick="{{ generateShare }}" disabled="{{ shareEmailInvalid }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#FFFFFF;background:#1E4A40;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;opacity:{{ generateOpacity }};">Generate link</button>
+</div>
+</div>
+<sc-if value="{{ shareGenerated }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:8px;padding:16px 18px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;">
+<div style="font-size:16px;line-height:20px;font-weight:600;">Link for {{ shareGeneratedEmail }}</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<input readOnly="{{ true }}" value="{{ shareUrl }}" style="flex:1;min-width:200px;font:inherit;font-size:16px;padding:9px 12px;border:2px solid #1E2622;border-radius:6px;background:#F7F5F0;color:#1E2622;">
+<button type="button" onClick="{{ copyShare }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#1E4A40;background:#FFFFFF;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">{{ copyLabel }}</button>
+</div>
+<div style="font-size:14px;line-height:20px;color:#5A5F58;">{{ shareSummary }} Sent to {{ shareGeneratedEmail }} and recorded in {{ first }}'s history.</div>
+</div>
+</sc-if>
+
+<div style="display:flex;flex-direction:column;gap:12px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;">Links sent</div><span style="font-size:16px;line-height:20px;color:#5A5F58;">{{ shareHistNote }}</span></div>
+<div style="display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #1E2622;border-radius:6px;padding:4px 14px;">
+<sc-for list="{{ shareHistory }}" as="l" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:16px;align-items:center;padding:12px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;">
+<div style="display:flex;flex-direction:column;gap:3px;min-width:0;"><span style="font-weight:600;">{{ l.to }}</span><span style="color:#5A5F58;">{{ l.detail }}</span><span style="color:#5A5F58;">{{ l.opens }}</span></div>
+<span style="padding:4px 10px;border-radius:999px;font-weight:600;white-space:nowrap;background:{{ l.tagBg }};color:{{ l.tagFg }};">{{ l.status }}</span>
+<sc-if value="{{ l.active }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ l.revoke }}" style="padding:7px 14px;border:2px solid #1E2622;border-radius:6px;background:transparent;color:#1E2622;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">Revoke</button></sc-if>
+<sc-if value="{{ l.inactive }}" hint-placeholder-val="{{ true }}"><span style="font-size:16px;line-height:20px;color:#5A5F58;white-space:nowrap;">{{ l.endedOn }}</span></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Search" style="position:fixed;inset:0;z-index:50;overflow:auto;background:linear-gradient(160deg,#9CCBDD 0%,#CFE7EF 10%,#8FC2D6 20%,#BFDFEA 30%,#A8D3E2 40%,#D6EBF2 50%,#8FC2D6 60%,#BFDFEA 70%,#A8D3E2 80%,#CFE7EF 90%,#9CCBDD 100%);background-size:400% 400%;padding:0 0 40px;box-sizing:border-box;font-family:'Public Sans',sans-serif;color:#1E2622;">
+<div style="max-width:960px;margin:0 auto;padding:0 48px;"><div style="height:80px;display:flex;align-items:center;gap:10px;"><svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef2 }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#1E2622" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg><div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;">vsend</div></div></div>
+<div style="max-width:960px;margin:0 auto;padding:40px 48px 0;display:flex;flex-direction:column;gap:16px;">
+<div style="display:flex;justify-content:space-between;align-items:center;">
+<div style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;">Search</div>
+<button type="button" onClick="{{ closeSearch }}" aria-label="Close search" style="display:flex;align-items:center;gap:6px;border:0;background:transparent;font:inherit;font-size:16px;line-height:20px;font-weight:600;color:#1E2622;cursor:pointer;padding:6px 0;">Close<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<label style="display:flex;align-items:stretch;border:2px solid #1E2622;border-radius:8px;overflow:hidden;height:56px;background:#FFFFFF;">
+<input ref="{{ searchRef }}" value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search children, schools, trusts or settings" style="flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:19px;line-height:25px;color:#1E2622;padding:0 16px;">
+<button type="button" onClick="{{ closeSearch }}" style="flex:none;display:flex;align-items:center;gap:8px;padding:0 20px;border:0;background:#1E2622;color:#FFFFFF;font:inherit;font-size:16px;line-height:20px;font-weight:600;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>Search</button>
+</label>
+<div style="font-size:16px;line-height:20px;color:#1E2622;">Searches across children and young people, academies and schools, and multi-academy trusts.</div>
+</div>
+</div>
+</sc-if>
+
+<aside style="background:#F7F5F0;align-self:start;position:sticky;top:0;height:calc(100vh / .75);margin-bottom:-80px;overflow:auto;box-sizing:border-box;display:flex;flex-direction:column;">
+<div style="display:flex;flex-direction:column;padding:24px 0;font-size:19px;line-height:25px;flex:1;">
+<a href="index.html" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Home dashboard</a>
+<a href="readiness.html" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Setting Readiness</a>
+<a href="children.html" style="padding:10px 24px;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:#1E4A40;color:#1E2622;font-weight:700;">Children &amp; Young People</a>
+<a href="transitions.html" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Transitions</a>
+<a href="#" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Insights</a>
+</div>
+</aside>
+
+<main style="padding:40px 48px 96px;display:flex;flex-direction:column;gap:32px;min-width:0;background:#F7F5F0;">
+<div style="display:flex;flex-direction:column;gap:12px;">
+<a href="{{ profileHref }}" style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:16px;line-height:20px;color:#1E4A40;font-weight:600;text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E4A40" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>{{ child.name }}</a>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+<div style="display:flex;flex-direction:column;gap:8px;">
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;"><h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:36px;line-height:40px;margin:0;letter-spacing:-.01em;">Learning plan for {{ child.name }}</h1><span style="padding:4px 10px;border-radius:999px;font-weight:600;font-size:14px;line-height:18px;background:#FBF0D6;color:#7A5200;">Draft</span></div>
+<div style="font-size:19px;line-height:25px;color:#5A5F58;">{{ child.meta }} · Drafted {{ createdLabel }} by Nadiya Philips · Review {{ reviewLabel }}</div>
+</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;">
+<a href="{{ editHref }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#1E4A40;background:#FFFFFF;font-weight:600;font-size:16px;line-height:20px;">Edit draft</a>
+<a href="#" onClick="{{ openShare }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#1E4A40;background:#FFFFFF;font-weight:600;font-size:16px;line-height:20px;">Share</a>
+<a href="#" onClick="{{ openAgree }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#FFFFFF;background:#1E4A40;font-weight:600;font-size:16px;line-height:20px;">Agree learning plan</a>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+<sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:16px 20px;box-sizing:border-box;"><span style="font-family:'Source Serif 4',serif;font-size:32px;line-height:36px;font-weight:600;color:#1E4A40;">{{ s.n }}</span><span style="font-size:16px;line-height:20px;color:#1E2622;font-weight:600;">{{ s.label }}</span><span style="font-size:14px;line-height:18px;color:#5A5F58;">{{ s.detail }}</span></div>
+</sc-for>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:start;">
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Priority need</div>
+<div style="font-size:19px;line-height:25px;font-weight:600;">{{ priorityName }}</div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ compareRows }}" as="c" hint-placeholder-count="5">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;">
+<span style="font-weight:{{ c.weight }};color:#1E2622;">{{ c.name }}</span>
+<span style="color:#5A5F58;white-space:nowrap;">Need {{ c.need }} · Setting {{ c.ready }}</span>
+<span style="padding:2px 8px;border-radius:999px;font-weight:600;font-size:14px;line-height:18px;background:{{ c.tagBg }};color:{{ c.tagFg }};white-space:nowrap;">{{ c.tag }}</span>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{ hasMissed }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid #DDD6C9;padding-top:12px;"><div style="font-size:14px;line-height:18px;color:#5A5F58;font-weight:600;">What the documents missed</div><blockquote style="margin:0;padding:0 0 0 14px;border-left:3px solid #1E4A40;font-family:'Source Serif 4',serif;font-size:19px;line-height:27px;color:#1E2622;">{{ missed }}</blockquote></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Setting readiness</div><a href="readiness.html" style="font-size:16px;line-height:20px;color:#1E4A40;font-weight:600;">{{ readyNote }}</a></div>
+<div style="font-size:16px;line-height:20px;color:#5A5F58;">In place at {{ child.school }} for this plan</div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ readyList }}" as="r" hint-placeholder-count="4">
+<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;color:#1E2622;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4A40" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>{{ r.title }}</div>
+</sc-for>
+</div>
+<sc-if value="{{ hasSettingNotes }}" hint-placeholder-val="{{ false }}"><blockquote style="margin:0;padding:0 0 0 14px;border-left:3px solid #1E4A40;font-family:'Source Serif 4',serif;font-size:19px;line-height:27px;color:#1E2622;">{{ settingNotes }}</blockquote></sc-if>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Strategies and interventions</div><span style="font-size:16px;line-height:20px;color:#5A5F58;">Grouped by the stages of {{ child.school }}'s provision map</span></div>
+<sc-for list="{{ stageGroups }}" as="g" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;gap:4px;">
+<div style="display:flex;align-items:center;gap:12px;padding-top:8px;"><span style="width:30px;height:30px;border-radius:50%;background:#1E4A40;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;flex:none;">{{ g.n }}</span><span style="font-size:19px;line-height:25px;font-weight:600;">{{ g.title }}</span><span style="font-size:16px;line-height:20px;color:#5A5F58;">{{ g.count }}</span></div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ g.items }}" as="it" hint-placeholder-count="2">
+<div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto;gap:16px;align-items:start;padding:14px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;">
+<div style="display:flex;flex-direction:column;gap:4px;"><div style="font-weight:600;color:#1E2622;">{{ it.title }}</div><div style="color:#5A5F58;">{{ it.detail }}</div><div style="color:#1E4A40;font-weight:600;font-size:14px;line-height:18px;">On the provision map as: {{ it.mapped }}</div></div>
+<div style="display:flex;flex-direction:column;gap:4px;color:#5A5F58;"><span>Owner: {{ it.owner }}</span><span>{{ it.costShort }}</span><span>{{ it.evidence }}</span></div>
+<span style="padding:4px 10px;border-radius:999px;font-weight:600;background:{{ it.costBg }};color:{{ it.costFg }};white-space:nowrap;">{{ it.cost }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0 0;border-top:2px solid #1E4A40;font-size:16px;line-height:20px;"><span style="font-weight:600;">Estimated cost to the school this term</span><span style="font-weight:600;">{{ totalCost }}</span></div>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { searchOpen: false, query: '', shareOpen: false, shareAud: 'family', sharePerms: { targets: true, strategies: true, needs: false, voice: true, cost: false, history: false }, shareExpiry: '30', sharePasscode: true, copied: false, revoked: [], shareEmail: '', shareGenerated: null, sent: [] };
+  sunRef3 = React.createRef();
+  sunRef4 = React.createRef();
+  sunRef = React.createRef();
+  sunRef2 = React.createRef();
+  searchRef = React.createRef();
+  sunColours = ['#F0A000','#4F8BE0','#E0584A','#3FA885','#EE7A3C','#9A6ED4'];
+  sunIdx = 0; sunRunning = false; sunLoop = null; sunToken = 0;
+  sunAnim(from, to) {
+    const ps = [this.sunRef.current, this.sunRef2.current, this.sunRef3.current, this.sunRef4.current].filter(Boolean); if (!ps.length) return Promise.resolve();
+    return Promise.all(ps.map(p => {
+      const a = p.animate([{ strokeDashoffset: from }, { strokeDashoffset: to }], { duration: 5000, easing: 'linear', fill: 'forwards' });
+      return a.finished.then(() => { p.style.strokeDashoffset = to; a.cancel(); }, () => {});
+    }));
+  }
+  startSun() {
+    if (this.sunRunning) return;
+    this.sunRunning = true;
+    const token = ++this.sunToken;
+    const prev = this.sunLoop || Promise.resolve();
+    this.sunLoop = prev.then(async () => {
+      while (token === this.sunToken && this.sunRunning) {
+        await this.sunAnim(0, -1);
+        this.sunIdx = (this.sunIdx + 1) % this.sunColours.length;
+        if (this.sunRef.current) this.sunRef.current.setAttribute('stroke', this.sunColours[this.sunIdx]);
+        await this.sunAnim(1, 0);
+      }
+    });
+  }
+  stopSun() { this.sunRunning = false; this.sunToken++; }
+  componentDidMount() {
+    const reset = () => { this.stopSun(); clearTimeout(this._idleT); this._idleT = setTimeout(() => this.startSun(), 7000); };
+    this._reset = reset;
+    ['mousemove','keydown','pointerdown','scroll','touchstart'].forEach(e => window.addEventListener(e, reset, { passive: true }));
+    this._esc = (e) => { if (e.key === 'Escape') this.setState({ searchOpen: false, shareOpen: false, agreeOpen: false }); };
+    window.addEventListener('keydown', this._esc);
+    reset();
+  }
+  componentWillUnmount() {
+    clearTimeout(this._idleT);
+    window.removeEventListener('keydown', this._esc);
+    ['mousemove','keydown','pointerdown','scroll','touchstart'].forEach(e => window.removeEventListener(e, this._reset));
+  }
+  newChild() {
+    const m = location.hash.match(/new=([^&]+)/); if (!m) return null;
+    try { return JSON.parse(decodeURIComponent(m[1])); } catch (e) { return null; }
+  }
+  draft() {
+    try { const d = JSON.parse(localStorage.getItem('vsend-draft-plan') || 'null'); if (d && d.child) return d; } catch (_) {}
+    return null;
+  }
+  renderVals() {
+    const nc = this.newChild();
+    const fallbackChild = nc ? { name: nc.name, meta: nc.meta, school: nc.meta.split(' · ')[1], teacher: 'R. Mensah' } : { name: 'Amara Okafor', meta: 'Year 4 · Oakfield Primary', school: 'Oakfield Primary', teacher: 'R. Mensah' };
+    const d = this.draft() || { child: fallbackChild, priorityName: 'Communication and Interaction', missed: '', settingNotes: '', readySummary: ['TA time for 1:1 or small groups', 'Quiet or calm space in or near the classroom', 'ELSA-trained member of staff'], readyNote: '3 of 7 in place', compareRows: [{ name: 'Communication and Interaction', need: '6/10', ready: '6.0/10', tag: 'Covered' }, { name: 'Cognition and Learning', need: '4/10', ready: '7.2/10', tag: 'Covered' }, { name: 'Social, Emotional and Mental Health', need: '5/10', ready: '4.0/10', tag: 'Stretch' }, { name: 'Physical or Sensory', need: '3/10', ready: '5.2/10', tag: 'Covered' }, { name: 'Independence', need: '4/10', ready: '6.0/10', tag: 'Covered' }], chosen: [{ title: 'Two-step instructions with a check-in', detail: 'Give instructions in two steps, then ask the child to say back what they will do.', owner: 'Class teacher', cost: 'Free', costShort: 'No cost', price: 0, stage: 1, mapped: 'Chunking instructions, giving processing and response time and stressing keywords', evidence: '' }, { title: 'Pre-teach key vocabulary', detail: 'Five minutes before the lesson on the three words that matter most.', owner: 'Class teacher', cost: 'Free', costShort: 'No cost', price: 0, stage: 1, mapped: 'Being aware of the number of information-carrying words being used', evidence: '' }, { title: 'Talk Boost small group', detail: 'Three 20-minute sessions a week for ten weeks, group of four.', owner: 'Trained TA', cost: 'Needs resourcing', costShort: '£450 · TA, 3 × 20 min a week for 10 weeks', price: 450, stage: 2, mapped: 'Specifically designed social skills training sessions, including peer involvement', evidence: 'EEF: moderate impact, strong evidence' }], totalCost: '£450', reviewDate: '2027-01-15', shareTeacher: true, shareFamily: true, created: new Date().toISOString() };
+    const child = d.child;
+    const fmt = iso => { const dt = new Date(iso); return isNaN(dt) ? iso : dt.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); };
+    const costStyle = { 'Free': ['#E3EDE9', '#1E4A40'], 'Needs resourcing': ['#F1EADB', '#5E4160'], 'External referral': ['#E6EDF7', '#2F5FA8'] };
+    const tagStyle = { Gap: ['#F1EADB', '#5E4160'], Stretch: ['#FBF0D6', '#7A5200'], Covered: ['#E3EDE9', '#1E4A40'] };
+    const items = (d.chosen || []).map(x => { const cs = costStyle[x.cost] || costStyle.Free; return { ...x, costBg: cs[0], costFg: cs[1], evidence: x.evidence || '' }; });
+    const groups = [{ n: '1', title: 'Stage one · whole-school and in-class' }, { n: '2', title: 'Stage two · targeted' }, { n: '3', title: 'External advice' }].map(g => { const its = items.filter(x => x.stage === Number(g.n)); return { ...g, items: its, count: its.length + (its.length === 1 ? ' strategy' : ' strategies') }; }).filter(g => g.items.length);
+    const shared = [d.shareTeacher ? 'Class teacher (' + (child.teacher || 'R. Mensah') + ')' : null, d.shareFamily ? 'Family' : null].filter(Boolean);
+    return {
+      child, first: child.name.split(' ')[0],
+      shareOpen: this.state.shareOpen,
+      openShare: e => { e.preventDefault(); this.setState({ shareOpen: true, copied: false, shareGenerated: null, shareEmail: '' }); },
+      closeShare: () => this.setState({ shareOpen: false }),
+      shareAudiences: [
+              { key: 'family', title: 'Parent or carer', detail: 'Plain-language view, with the family voice section open.' },
+              { key: 'staff', title: 'Staff in this school', detail: 'Full plan including strategies, owners and cost.' },
+              { key: 'external', title: 'External professional', detail: 'Speech and language, EP, health. Strategies and evidence, no cost.' },
+              { key: 'la', title: 'Local authority', detail: 'Full plan and needs profile, for EHCP requests and annual review.' },
+            ].map(a => ({ ...a, on: this.state.shareAud === a.key, border: this.state.shareAud === a.key ? '#1E4A40' : '#DDD6C9', pick: () => { const presets = { family: { targets: true, strategies: true, needs: false, voice: true, cost: false, history: false }, staff: { targets: true, strategies: true, needs: true, voice: true, cost: true, history: true }, external: { targets: true, strategies: true, needs: true, voice: true, cost: false, history: false }, la: { targets: true, strategies: true, needs: true, voice: true, cost: true, history: true } }; this.setState({ shareAud: a.key, sharePerms: presets[a.key], copied: false }); } })),
+      sharePerms: [
+              { key: 'targets', title: 'Targets and outcomes', detail: 'What the plan is working towards.', locked: true },
+              { key: 'strategies', title: 'Strategies and who owns them', detail: 'Interventions, frequency and named staff.' },
+              { key: 'needs', title: 'Needs profile and radar', detail: 'Ratings across the five areas.' },
+              { key: 'voice', title: 'Child and family voice', detail: 'Quotes recorded with the child and family.' },
+              { key: 'cost', title: 'Costs and resourcing', detail: 'Estimated cost to the school.' },
+              { key: 'history', title: 'History of interactions', detail: 'Meetings, notes and referrals.' },
+            ].map(pm => ({ ...pm, on: !!this.state.sharePerms[pm.key], fg: pm.locked ? '#5A5F58' : '#1E2622', toggle: () => this.setState(s => ({ sharePerms: { ...s.sharePerms, [pm.key]: !s.sharePerms[pm.key] }, copied: false })) })),
+      shareExpiry: this.state.shareExpiry,
+      onShareExpiry: e => this.setState({ shareExpiry: e.target.value, copied: false }),
+      sharePasscode: this.state.sharePasscode,
+      toggleSharePasscode: () => this.setState(s => ({ sharePasscode: !s.sharePasscode, copied: false })),
+      shareUrl: 'https://vsend.example/plan/' + (child.id || child.name.replace(/\s+/g, '-')).toLowerCase() + '-' + this.state.shareAud + '-' + Object.keys(this.state.sharePerms).filter(k => this.state.sharePerms[k]).length + 'k' + this.state.shareExpiry,
+      copyLabel: this.state.copied ? 'Copied' : 'Copy link',
+      shareEmail: this.state.shareEmail,
+      onShareEmail: e => this.setState({ shareEmail: e.target.value }),
+      shareEmailInvalid: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.shareEmail),
+      generateOpacity: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.shareEmail) ? 1 : 0.5,
+      shareGenerated: !!this.state.shareGenerated,
+      shareGeneratedEmail: this.state.shareGenerated ? this.state.shareGenerated.email : '',
+      generateShare: () => { const email = this.state.shareEmail.trim(); const aud = { family: "parent", staff: "school staff", external: "external professional", la: "local authority" }[this.state.shareAud]; const secs = Object.keys(this.state.sharePerms).filter(k => this.state.sharePerms[k]).length; const days = Number(this.state.shareExpiry); const exp = new Date(Date.now() + days * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); this.setState(s => ({ shareGenerated: { email }, copied: false, shareEmail: '', sent: [{ id: 'n' + Date.now(), to: email + ' (' + aud + ')', detail: secs + ' of 6 sections · sent today · expires ' + exp, opens: 'Not opened yet', status: 'Active', endedOn: '' }].concat(s.sent) })); },
+      shareHistory: this.state.sent.concat(nc ? [] : [
+            { id: 1, to: 'Mrs Chiamaka Okafor (parent)', detail: 'Targets, strategies and family voice · sent 3 Oct 2026 · expires 2 Nov 2026', opens: 'Opened 4 times, last 18 Oct', status: 'Active', endedOn: '' },
+            { id: 2, to: 'J. Patel, speech and language therapist', detail: 'Targets, strategies and needs profile · sent 29 Sep 2026 · expires 28 Dec 2026', opens: 'Opened twice, last 6 Oct', status: 'Active', endedOn: '' },
+            { id: 3, to: 'Year 4 team (school staff)', detail: 'Full plan · sent 15 Jul 2026 · expired 14 Aug 2026', opens: 'Opened 11 times', status: 'Expired', endedOn: 'Expired 14 Aug' },
+            { id: 4, to: 'Mrs Chiamaka Okafor (parent)', detail: 'Targets and strategies · sent 2 Jun 2026', opens: 'Opened once', status: 'Revoked', endedOn: 'Revoked 9 Jun' },
+          ]).map(l => { const revokedNow = this.state.revoked.includes(l.id); const status = revokedNow ? 'Revoked' : l.status; const active = status === 'Active'; const tag = { Active: ['#E3EFE9', '#1E4A40'], Expired: ['#EEE9DF', '#5A5F58'], Revoked: ['#F9E0DC', '#8A2A1D'] }[status]; return { ...l, status, active, inactive: !active, endedOn: revokedNow ? 'Revoked today' : l.endedOn, tagBg: tag[0], tagFg: tag[1], revoke: () => this.setState(s => ({ revoked: s.revoked.concat(l.id) })) }; }),
+      shareHistNote: (nc && !this.state.sent.length) ? 'No links sent yet.' : (() => { const n = (nc ? 0 : 2) + this.state.sent.length - this.state.revoked.length; return n + ' active · revoking stops a link working straight away'; })(),
+      copyShare: () => { const url = 'https://vsend.example/plan/' + (child.id || child.name.replace(/\s+/g, '-')).toLowerCase(); if (navigator.clipboard) navigator.clipboard.writeText(url).catch(() => {}); this.setState({ copied: true }); },
+      shareSummary: (() => { const n = Object.keys(this.state.sharePerms).filter(k => this.state.sharePerms[k]).length; const days = { '7': '7 days', '30': '30 days', '90': '90 days' }[this.state.shareExpiry]; return 'Shares ' + n + ' of 6 sections for ' + days + (this.state.sharePasscode ? ', passcode required.' : ', no passcode.'); })(),
+      sunRef3: this.sunRef3,
+      sunRef: this.sunRef, sunRef2: this.sunRef2, searchRef: this.searchRef, searchOpen: this.state.searchOpen,
+      openSearch: () => this.setState({ searchOpen: true }, () => this.searchRef.current && this.searchRef.current.focus()), closeSearch: () => this.setState({ searchOpen: false }),
+      query: this.state.query, onQuery: e => this.setState({ query: e.target.value }),
+      profileHref: 'child.html' + location.hash, editHref: 'plan.html' + location.hash,
+      createdLabel: fmt(d.created), reviewLabel: fmt(d.reviewDate),
+      agreeOpen: !!this.state.agreeOpen, agreeDone: !!this.state.agreeDone, agreeForm: !this.state.agreeDone,
+      openAgree: e => { e.preventDefault(); this.setState({ agreeOpen: true, agreeDone: false }); },
+      closeAgree: () => this.setState({ agreeOpen: false }),
+      ...(() => {
+        const addWeeks = w => { const dt = new Date(); dt.setDate(dt.getDate() + w * 7); return dt.toISOString().slice(0, 10); };
+        const presets = [{ label: '6 weeks', w: 6 }, { label: 'Half term (12 weeks)', w: 12 }, { label: 'End of year', iso: new Date().getFullYear() + 1 + '-07-17' }].map(p => ({ ...p, iso: p.iso || addWeeks(p.w) }));
+        const sel = this.state.agreeReviewDate || presets[1].iso;
+        const signDefault = { senco: true, teacher: true, family: true, head: false };
+        const sign = this.state.sign || signDefault;
+        const teacher = child.teacher || 'R. Mensah';
+        const signers = [
+          { key: 'senco', title: 'SENCo (you)', detail: 'Nadiya Philips · signs now', locked: true },
+          { key: 'teacher', title: 'Class teacher (' + teacher + ')', detail: 'Confirms the in-class strategies are workable.' },
+          { key: 'family', title: 'Parent or carer', detail: 'Agrees the targets and the family voice is reflected.' },
+          { key: 'head', title: 'Headteacher', detail: 'Needed where the plan commits school funding.' },
+        ].map(s => ({ ...s, on: s.locked || !!sign[s.key], bg: (s.locked || sign[s.key]) ? '#F3F7F5' : '#FFFFFF', toggle: () => { if (s.locked) return; this.setState(st => ({ sign: { ...(st.sign || signDefault), [s.key]: !(st.sign || signDefault)[s.key] } })); } }));
+        const chosen = signers.filter(s => s.on);
+        const others = chosen.filter(s => !s.locked).map(s => s.title.replace(/ \(.*\)$/, '').toLowerCase());
+        return {
+          reviewPresets: presets.map(p => ({ ...p, border: sel === p.iso ? '#1E4A40' : '#DDD6C9', bg: sel === p.iso ? '#E3EDE9' : '#FFFFFF', pick: () => this.setState({ agreeReviewDate: p.iso }) })),
+          agreeReviewDate: sel, onAgreeReviewDate: e => this.setState({ agreeReviewDate: e.target.value }),
+          reviewNote: 'Review on ' + fmt(sel) + '. Everyone who signs off is reminded a week before.',
+          signers, signCount: chosen.length + ' of ' + signers.length,
+          agreeSummary: 'Review ' + fmt(sel) + ' · sign-off from ' + (others.length ? 'you and ' + others.join(', ') : 'you only'),
+          agreeDoneLine: others.length ? 'Sign-off requests sent to ' + others.join(', ') + '.' : 'Signed by you.',
+          confirmAgree: () => this.setState({ agreeDone: true }),
+        };
+      })(),
+      priorityName: d.priorityName,
+      compareRows: (d.compareRows || []).map(r => { const ts = tagStyle[r.tag] || tagStyle.Covered; return { ...r, tagBg: ts[0], tagFg: ts[1], weight: r.name === d.priorityName ? 700 : 400 }; }),
+      missed: d.missed || '', hasMissed: !!(d.missed && d.missed.trim()),
+      settingNotes: d.settingNotes || '', hasSettingNotes: !!(d.settingNotes && d.settingNotes.trim()),
+      readyNote: d.readyNote, readyList: (d.readySummary || []).map(t => ({ title: t })),
+      stageGroups: groups, totalCost: d.totalCost,
+      sharedWith: shared.length ? shared.join(' and ') : 'No one yet',
+      stats: [
+        { n: String(items.length), label: 'Strategies', detail: items.filter(x => x.stage === 1).length + ' in class · ' + items.filter(x => x.stage !== 1).length + ' targeted or external' },
+        { n: d.totalCost, label: 'Cost this term', detail: 'To the school; referrals are LA funded' },
+        { n: fmt(d.reviewDate).split(' ').slice(0, 2).join(' '), label: 'Review', detail: fmt(d.reviewDate) },
+        { n: String(shared.length), label: 'Shared with', detail: shared.length ? shared.join(', ') : 'Not shared yet' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

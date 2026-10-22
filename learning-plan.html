@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VSEND Learning plan</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F7F5F0;color:#1E2622;zoom:.75;}a{color:#1E4A40;}a:hover{color:#1E2622;}@media (max-width:1023px){div[style*="columns: 310px"],div[style*="columns:310px"]{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto minmax(0,1fr)!important;}header[style*="columns: 310px"],header[style*="columns:310px"]{grid-template-columns:auto minmax(0,1fr)!important;grid-column:1!important;}aside,main{grid-column:1!important;}header[style*="columns: 310px"],header[style*="columns:310px"]{height:auto!important;padding:24px 0!important;row-gap:12px;}header>div:first-child{height:auto!important;}header>div:last-child{padding:0 20px!important;height:auto!important;flex-wrap:wrap;}aside{position:static!important;height:auto!important;margin-bottom:0!important;}aside>div:first-child{flex-direction:row!important;flex-wrap:wrap;padding:8px 12px!important;font-size:16px!important;line-height:20px!important;}aside>div:first-child a{padding:8px 12px!important;}main{padding:24px 20px 64px!important;}main div[style*="3fr"]{grid-template-columns:minmax(0,1fr)!important;}}@media (max-width:639px){header span[style*="nowrap"]{display:none!important;}main{padding:20px 16px 56px!important;}}@keyframes sap-stem{0%{stroke-dashoffset:1}70%,100%{stroke-dashoffset:0}}@keyframes sap-fade{0%,93%{opacity:1}97%,100%{opacity:0}}@keyframes sap-l0{0%,20.6%{transform:scale(0)}38.6%,100%{transform:scale(1)}}@keyframes sap-l1{0%,24.7%{transform:scale(0)}42.7%,100%{transform:scale(1)}}@keyframes sap-l2{0%,37.1%{transform:scale(0)}55.1%,100%{transform:scale(1)}}@keyframes sap-l3{0%,41.2%{transform:scale(0)}59.2%,100%{transform:scale(1)}}@keyframes sap-l4{0%,53.5%{transform:scale(0)}71.5%,100%{transform:scale(1)}}@keyframes sap-l5{0%,57.6%{transform:scale(0)}75.6%,100%{transform:scale(1)}}@keyframes sap-l6{0%,67.9%{transform:scale(0)}85.9%,100%{transform:scale(1)}}@keyframes sap-l7{0%,70.0%{transform:scale(0)}88.0%,100%{transform:scale(1)}}@keyframes dan-h0{0%{transform:scale(0) rotate(0deg)}40%{transform:scale(1) rotate(20deg)}90%{transform:scale(1) rotate(45deg)}100%{transform:scale(0) rotate(60deg)}}@keyframes dan-h1{0%{transform:scale(0) rotate(0deg)}40%{transform:scale(1) rotate(-20deg)}90%{transform:scale(1) rotate(-45deg)}100%{transform:scale(0) rotate(-60deg)}}@keyframes dan-h2{0%{transform:scale(0) rotate(0deg)}40%{transform:scale(1) rotate(20deg)}90%{transform:scale(1) rotate(45deg)}100%{transform:scale(0) rotate(60deg)}}@keyframes logo-cw{to{transform:rotate(360deg)}}@keyframes hdr-shift{0%{background-position:0% 0%}50%{background-position:100% 100%}100%{background-position:0% 0%}}header[style*="columns: 310px"]::after,header[style*="columns:310px"]::after{content:"";position:absolute;left:50%;bottom:-1px;width:calc(100vw / .75);transform:translateX(-50%);border-bottom:1px solid #B5AE9F;pointer-events:none;}
+</style>
+</helmet>
+
+<div style="font-family:'Public Sans',sans-serif;display:grid;grid-template-columns:310px minmax(0,1fr);grid-template-rows:80px minmax(0,1fr);min-height:calc(100vh / .75);box-sizing:border-box;max-width:calc(1080px / .75);margin:0 auto;">
+
+<header style="grid-column:1/3;display:grid;grid-template-columns:310px minmax(0,1fr);align-items:center;box-sizing:border-box;background:#F7F5F0;position:relative;z-index:2;">
+<div style="display:flex;align-items:center;gap:10px;padding-left:24px;min-width:max-content;padding-right:24px;height:44px;">
+<svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#F0A000" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg>
+<div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;white-space:nowrap;">vsend</div>
+</div>
+<div style="padding:0 48px;min-width:0;"><div style="display:flex;align-items:center;justify-content:flex-end;gap:16px;font-size:16px;line-height:20px;color:#1E2622;height:44px;">
+<button type="button" aria-label="Search" onClick="{{ openSearch }}" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:0;border-radius:6px;background:transparent;color:#1E2622;cursor:pointer;padding:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></button>
+<span style="white-space:nowrap;">Signed in as <strong style="color:#1E2622;font-weight:600;">Nadiya Philips</strong></span>
+<a href="#" style="padding:7px 14px;border:2px solid #1E2622;border-radius:6px;text-decoration:none;color:#1E2622;background:transparent;font-weight:600;line-height:20px;">Log out</a>
+</div></div>
+</header>
+<sc-if value="{{ shareOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Share plan" style="position:fixed;inset:0;z-index:60;overflow:auto;background:linear-gradient(160deg,#F2B78A 0%,#FBE3CF 10%,#EEA66F 20%,#F8D8BC 30%,#F4C59E 40%,#FCEBDC 50%,#EEA66F 60%,#F8D8BC 70%,#F4C59E 80%,#FBE3CF 90%,#F2B78A 100%);background-size:400% 400%;padding:0 0 40px;box-sizing:border-box;font-family:'Public Sans',sans-serif;color:#1E2622;">
+<div style="max-width:960px;margin:0 auto;padding:0 48px;"><div style="height:80px;display:flex;align-items:center;gap:10px;"><svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef3 }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#1E2622" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg><div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;">vsend</div></div></div>
+<div style="max-width:960px;margin:0 auto;padding:24px 48px 96px;display:flex;flex-direction:column;gap:28px;">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">
+<div style="display:flex;flex-direction:column;gap:6px;"><h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;margin:0;">Share {{ first }}'s plan</h2><div style="font-size:16px;line-height:22px;color:#5A5F58;">Anyone with the link can open the plan. Choose what they can see and when the link stops working.</div></div>
+<button type="button" onClick="{{ closeShare }}" aria-label="Close share" style="display:flex;align-items:center;gap:6px;border:0;background:transparent;font:inherit;font-size:16px;line-height:20px;font-weight:600;color:#1E2622;cursor:pointer;padding:6px 0;">Close<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<div style="font-size:19px;line-height:25px;font-weight:600;">Who is this for?</div>
+<div style="display:flex;flex-direction:column;gap:8px;">
+<sc-for list="{{ shareAudiences }}" as="a" hint-placeholder-count="4">
+<label style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:12px 14px;border:2px solid {{ a.border }};border-radius:6px;background:#FFFFFF;cursor:pointer;">
+<input type="radio" name="share-aud" checked="{{ a.on }}" onChange="{{ a.pick }}" style="width:20px;height:20px;margin:2px 0 0;accent-color:#1E4A40;">
+<span style="display:flex;flex-direction:column;gap:2px;font-size:16px;line-height:20px;"><span style="font-weight:600;">{{ a.title }}</span><span style="color:#5A5F58;">{{ a.detail }}</span></span>
+</label>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<div style="font-size:19px;line-height:25px;font-weight:600;">What they can see</div>
+<div style="display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #1E2622;border-radius:6px;padding:4px 14px;">
+<sc-for list="{{ sharePerms }}" as="pm" hint-placeholder-count="5">
+<label style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;cursor:pointer;">
+<span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;color:{{ pm.fg }};">{{ pm.title }}</span><span style="color:#5A5F58;">{{ pm.detail }}</span></span>
+<input type="checkbox" checked="{{ pm.on }}" disabled="{{ pm.locked }}" onChange="{{ pm.toggle }}" style="width:22px;height:22px;margin:0;accent-color:#1E4A40;">
+</label>
+</sc-for>
+</div>
+<div style="font-size:14px;line-height:20px;color:#5A5F58;">Date of birth, child ID and contact details are never included in a shared link.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:16px;line-height:20px;font-weight:600;">Link expires<select value="{{ shareExpiry }}" onChange="{{ onShareExpiry }}" style="font:inherit;font-weight:400;padding:9px 12px;border:2px solid #1E2622;border-radius:6px;background:#FFFFFF;color:#1E2622;"><option value="7">In 7 days</option><option value="30">In 30 days</option><option value="90">At the next review (90 days)</option></select></label>
+<label style="display:flex;align-items:center;gap:12px;align-self:end;padding:9px 0;font-size:16px;line-height:20px;cursor:pointer;"><input type="checkbox" checked="{{ sharePasscode }}" onChange="{{ toggleSharePasscode }}" style="width:22px;height:22px;margin:0;accent-color:#1E4A40;">Require a passcode sent by text</label>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<label for="share-email" style="font-size:19px;line-height:25px;font-weight:600;">Send to</label>
+<div style="font-size:16px;line-height:20px;color:#5A5F58;">The link is tied to this address. If the passcode is on, it is texted to the number on file.</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<input id="share-email" type="email" value="{{ shareEmail }}" onChange="{{ onShareEmail }}" placeholder="name@example.com" style="flex:1;min-width:220px;font:inherit;font-size:16px;padding:9px 12px;border:2px solid #1E2622;border-radius:6px;background:#FFFFFF;color:#1E2622;outline:0;">
+<button type="button" onClick="{{ generateShare }}" disabled="{{ shareEmailInvalid }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#FFFFFF;background:#1E4A40;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;opacity:{{ generateOpacity }};">Generate link</button>
+</div>
+</div>
+<sc-if value="{{ shareGenerated }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:8px;padding:16px 18px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;">
+<div style="font-size:16px;line-height:20px;font-weight:600;">Link for {{ shareGeneratedEmail }}</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<input readOnly="{{ true }}" value="{{ shareUrl }}" style="flex:1;min-width:200px;font:inherit;font-size:16px;padding:9px 12px;border:2px solid #1E2622;border-radius:6px;background:#F7F5F0;color:#1E2622;">
+<button type="button" onClick="{{ copyShare }}" style="padding:9px 16px;border:2px solid #1E4A40;border-radius:6px;color:#1E4A40;background:#FFFFFF;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">{{ copyLabel }}</button>
+</div>
+<div style="font-size:14px;line-height:20px;color:#5A5F58;">{{ shareSummary }} Sent to {{ shareGeneratedEmail }} and recorded in {{ first }}'s history.</div>
+</div>
+</sc-if>
+
+<div style="display:flex;flex-direction:column;gap:12px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;">Links sent</div><span style="font-size:16px;line-height:20px;color:#5A5F58;">{{ shareHistNote }}</span></div>
+<div style="display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #1E2622;border-radius:6px;padding:4px 14px;">
+<sc-for list="{{ shareHistory }}" as="l" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:16px;align-items:center;padding:12px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;">
+<div style="display:flex;flex-direction:column;gap:3px;min-width:0;"><span style="font-weight:600;">{{ l.to }}</span><span style="color:#5A5F58;">{{ l.detail }}</span><span style="color:#5A5F58;">{{ l.opens }}</span></div>
+<span style="padding:4px 10px;border-radius:999px;font-weight:600;white-space:nowrap;background:{{ l.tagBg }};color:{{ l.tagFg }};">{{ l.status }}</span>
+<sc-if value="{{ l.active }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ l.revoke }}" style="padding:7px 14px;border:2px solid #1E2622;border-radius:6px;background:transparent;color:#1E2622;font:inherit;font-weight:600;font-size:16px;line-height:20px;cursor:pointer;">Revoke</button></sc-if>
+<sc-if value="{{ l.inactive }}" hint-placeholder-val="{{ true }}"><span style="font-size:16px;line-height:20px;color:#5A5F58;white-space:nowrap;">{{ l.endedOn }}</span></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Search" style="position:fixed;inset:0;z-index:50;overflow:auto;background:linear-gradient(160deg,#9CCBDD 0%,#CFE7EF 10%,#8FC2D6 20%,#BFDFEA 30%,#A8D3E2 40%,#D6EBF2 50%,#8FC2D6 60%,#BFDFEA 70%,#A8D3E2 80%,#CFE7EF 90%,#9CCBDD 100%);background-size:400% 400%;padding:0 0 40px;box-sizing:border-box;font-family:'Public Sans',sans-serif;color:#1E2622;">
+<div style="max-width:960px;margin:0 auto;padding:0 48px;"><div style="height:80px;display:flex;align-items:center;gap:10px;"><svg width="40" height="40" style="flex:none;" viewBox="0 0 100 100"><path ref="{{ sunRef2 }}" d="M83.4 50.0 Q93.9 63.1 77.9 68.3 Q80.2 80.9 65.9 75.4 Q62.6 91.3 51.1 83.6 Q37.6 94.2 31.6 78.1 Q18.7 79.7 23.6 65.4 Q8.6 62.4 17.0 51.8 Q5.6 38.5 22.5 32.5 Q20.6 18.4 34.7 21.6 Q38.2 8.3 48.0 17.1 Q60.8 5.4 65.7 23.4 Q81.4 20.5 80.0 34.8 Q92.1 39.9 83.4 50.0 Z" fill="none" stroke="#1E2622" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1" style="stroke-dasharray:1 1;stroke-dashoffset:0;"></path></svg><div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.01em;color:#1E2622;">vsend</div></div></div>
+<div style="max-width:960px;margin:0 auto;padding:40px 48px 0;display:flex;flex-direction:column;gap:16px;">
+<div style="display:flex;justify-content:space-between;align-items:center;">
+<div style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;line-height:30px;">Search</div>
+<button type="button" onClick="{{ closeSearch }}" aria-label="Close search" style="display:flex;align-items:center;gap:6px;border:0;background:transparent;font:inherit;font-size:16px;line-height:20px;font-weight:600;color:#1E2622;cursor:pointer;padding:6px 0;">Close<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E2622" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<label style="display:flex;align-items:stretch;border:2px solid #1E2622;border-radius:8px;overflow:hidden;height:56px;background:#FFFFFF;">
+<input ref="{{ searchRef }}" value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search children, schools, trusts or settings" style="flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:19px;line-height:25px;color:#1E2622;padding:0 16px;">
+<button type="button" onClick="{{ closeSearch }}" style="flex:none;display:flex;align-items:center;gap:8px;padding:0 20px;border:0;background:#1E2622;color:#FFFFFF;font:inherit;font-size:16px;line-height:20px;font-weight:600;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>Search</button>
+</label>
+<div style="font-size:16px;line-height:20px;color:#1E2622;">Searches across children and young people, academies and schools, and multi-academy trusts.</div>
+</div>
+</div>
+</sc-if>
+
+<aside style="background:#F7F5F0;align-self:start;position:sticky;top:0;height:calc(100vh / .75);margin-bottom:-80px;overflow:auto;box-sizing:border-box;display:flex;flex-direction:column;">
+<div style="display:flex;flex-direction:column;padding:24px 0;font-size:19px;line-height:25px;flex:1;">
+<a href="index.html" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Home dashboard</a>
+<a href="readiness.html" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Setting Readiness</a>
+<a href="children.html" style="padding:10px 24px;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:#1E4A40;color:#1E2622;font-weight:700;">Children &amp; Young People</a>
+<a href="transitions.html" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Transitions</a>
+<a href="#" style="padding:10px 24px;text-decoration:none;color:#1E2622;">Insights</a>
+</div>
+</aside>
+
+<main style="padding:40px 48px 96px;display:flex;flex-direction:column;gap:32px;min-width:0;background:#F7F5F0;">
+<div style="display:flex;flex-direction:column;gap:12px;">
+<a href="{{ profileHref }}" style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:16px;line-height:20px;color:#1E4A40;font-weight:600;text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E4A40" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>{{ child.name }}</a>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;">
+<div style="display:flex;flex-direction:column;gap:6px;">
+<h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:36px;line-height:40px;margin:0;letter-spacing:-.01em;">Learning plan for {{ first }}</h1>
+<div style="font-size:19px;line-height:25px;color:#5A5F58;">{{ child.meta }} · Autumn term 2026 · agreed 3 Oct with Mrs Okafor and R. Mensah</div>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<a href="#" onClick="{{ openShare }}" style="flex:none;margin-top:3px;display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#1E4A40;background:#FFFFFF;font-weight:600;font-size:16px;line-height:20px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E4A40" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg>Share plan</a>
+<a href="{{ planHref }}" style="flex:none;margin-top:3px;padding:7px 14px;border:2px solid #1E4A40;border-radius:6px;text-decoration:none;color:#FFFFFF;background:#1E4A40;font-weight:600;font-size:16px;line-height:20px;">Edit plan</a>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;">
+<sc-for list="{{ planStats }}" as="s" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:16px 20px;box-sizing:border-box;"><span style="font-family:'Source Serif 4',serif;font-size:30px;line-height:36px;font-weight:600;color:#1E4A40;">{{ s.n }}</span><span style="font-size:16px;line-height:20px;font-weight:600;">{{ s.label }}</span><span style="font-size:14px;line-height:20px;color:#5A5F58;">{{ s.detail }}</span></div>
+</sc-for>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Targets</div><span style="font-size:16px;line-height:20px;color:#5A5F58;">What {{ first }} is working towards this term</span></div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ planTargets }}" as="t" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:22px;">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;"><div style="display:flex;align-items:center;gap:12px;"><span style="width:30px;height:30px;border-radius:50%;background:#1E4A40;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;flex:none;">{{ t.n }}</span><span style="font-family:'Source Serif 4',serif;font-size:19px;line-height:24px;font-weight:600;">{{ t.title }}</span></div><span style="padding:4px 10px;border-radius:999px;font-weight:600;background:{{ t.bg }};color:{{ t.fg }};white-space:nowrap;">{{ t.status }}</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding-left:42px;">
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="color:#5A5F58;">Success looks like</span><span>{{ t.success }}</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="color:#5A5F58;">Linked need</span><span>{{ t.need }}</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;padding-left:42px;"><span style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#5A5F58;">Progress</span><span style="font-weight:600;">{{ t.pctLabel }}</span></span><span style="height:6px;border-radius:3px;background:#EEE9DF;overflow:hidden;display:block;"><span style="display:block;height:100%;width:{{ t.pct }};background:{{ t.bar }};"></span></span></div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Interventions and strategies</div><span style="font-size:16px;line-height:20px;color:#5A5F58;">What is in place, who runs it, and the progress made against each</span></div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ provision }}" as="p" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:22px;">
+<div style="display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr) minmax(0,1fr) auto;gap:16px;align-items:start;">
+<span style="display:flex;flex-direction:column;gap:3px;"><span style="font-family:'Source Serif 4',serif;font-size:19px;line-height:24px;font-weight:600;">{{ p.title }}</span><span style="color:#5A5F58;">{{ p.detail }}</span></span>
+<span style="display:flex;flex-direction:column;gap:3px;"><span style="color:#5A5F58;">Owner</span><span>{{ p.owner }}</span></span>
+<span style="display:flex;flex-direction:column;gap:3px;"><span style="color:#5A5F58;">When</span><span>{{ p.when }}</span></span>
+<span style="padding:4px 10px;border-radius:999px;font-weight:600;background:{{ p.bg }};color:{{ p.fg }};white-space:nowrap;">{{ p.status }}</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px;align-items:start;">
+<span style="display:flex;flex-direction:column;gap:6px;"><span style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#5A5F58;">Delivered</span><span style="font-weight:600;">{{ p.delivered }}</span></span><span style="height:6px;border-radius:3px;background:#EEE9DF;overflow:hidden;display:block;"><span style="display:block;height:100%;width:{{ p.pct }};background:{{ p.bar }};"></span></span><span style="color:#5A5F58;">Supports target {{ p.target }}</span></span>
+<span style="display:flex;flex-direction:column;gap:3px;"><span style="color:#5A5F58;">Progress so far</span><span>{{ p.progress }}</span><span style="color:#5A5F58;">{{ p.lastNote }}</span></span>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:stretch;">
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Progress log</div><a href="#" style="font-size:16px;line-height:20px;color:#1E4A40;font-weight:600;">Add an entry</a></div>
+<div style="display:flex;flex-direction:column;">
+<sc-for list="{{ progressLog }}" as="e" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:4px;padding:12px 0;border-top:1px solid #DDD6C9;font-size:16px;line-height:20px;">
+<span style="display:flex;justify-content:space-between;gap:12px;"><span style="font-weight:600;">Target {{ e.target }} · {{ e.who }}</span><span style="color:#5A5F58;white-space:nowrap;">{{ e.when }}</span></span>
+<span>{{ e.note }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:16px;">
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">Review</div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:20px;color:#5A5F58;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><span>Next review</span><span style="font-weight:600;color:#1E2622;">{{ child.nextReview }}</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><span>Last review</span><span style="font-weight:600;color:#1E2622;">{{ child.lastReview }}</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><span>Cycle</span><span style="font-weight:600;color:#1E2622;">Termly</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><span>Agreed by</span><span style="font-weight:600;color:#1E2622;">Mrs Okafor, R. Mensah, you</span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border:2px solid #1E4A40;border-radius:6px;padding:20px;box-sizing:border-box;">
+<div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:30px;font-weight:600;">In their words</div>
+<blockquote style="margin:0;padding:0 0 0 14px;border-left:3px solid #1E4A40;font-family:'Source Serif 4',serif;font-size:19px;line-height:27px;">“I like it when I know what is coming next. The picture timetable helps.”<span style="display:block;margin-top:6px;font-family:'Public Sans',sans-serif;font-size:14px;line-height:20px;color:#5A5F58;">{{ first }} · 2 Oct</span></blockquote>
+<blockquote style="margin:0;padding:0 0 0 14px;border-left:3px solid #1E4A40;font-family:'Source Serif 4',serif;font-size:19px;line-height:27px;">“She is much calmer on days when she knows the plan. Bedtimes are still hard since the move.”<span style="display:block;margin-top:6px;font-family:'Public Sans',sans-serif;font-size:14px;line-height:20px;color:#5A5F58;">Mrs Okafor · 29 Sep</span></blockquote>
+</div>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { query: '', idle: false, logoKey: 0, searchOpen: false, type: 'All', shareOpen: false, shareAud: 'family', sharePerms: { targets: true, strategies: true, needs: false, voice: true, cost: false, history: false }, shareExpiry: '30', sharePasscode: true, copied: false, revoked: [], shareEmail: '', shareGenerated: null, sent: [] };
+  searchRef = React.createRef();
+  sunRef = React.createRef();
+  sunRef2 = React.createRef();
+  sunRef3 = React.createRef();
+  sunColours = ['#F0A000','#4F8BE0','#E0584A','#3FA885','#EE7A3C','#9A6ED4'];
+  sunIdx = 0; sunRunning = false; sunLoop = null; sunToken = 0;
+  sunAnim(from, to) {
+    const ps = [this.sunRef.current, this.sunRef2.current, this.sunRef3.current].filter(Boolean); if (!ps.length) return Promise.resolve();
+    return Promise.all(ps.map(p => {
+      const a = p.animate([{ strokeDashoffset: from }, { strokeDashoffset: to }], { duration: 5000, easing: 'linear', fill: 'forwards' });
+      return a.finished.then(() => { p.style.strokeDashoffset = to; a.cancel(); }, () => {});
+    }));
+  }
+  startSun() {
+    if (this.sunRunning) return;
+    this.sunRunning = true;
+    const token = ++this.sunToken;
+    const prev = this.sunLoop || Promise.resolve();
+    this.sunLoop = prev.then(async () => {
+      while (token === this.sunToken && this.sunRunning) {
+        await this.sunAnim(0, -1);
+        this.sunIdx = (this.sunIdx + 1) % this.sunColours.length;
+        if (this.sunRef.current) this.sunRef.current.setAttribute('stroke', this.sunColours[this.sunIdx]);
+        await this.sunAnim(1, 0);
+      }
+    });
+  }
+  stopSun() { this.sunRunning = false; this.sunToken++; }
+  componentDidMount() {
+    const reset = () => { this.stopSun(); clearTimeout(this._idleT); this._idleT = setTimeout(() => this.startSun(), 7000); };
+    this._reset = reset;
+    ['mousemove','keydown','pointerdown','scroll','touchstart'].forEach(e => window.addEventListener(e, reset, { passive: true }));
+    this._esc = (e) => { if (e.key === 'Escape') this.setState({ searchOpen: false, shareOpen: false }); };
+    window.addEventListener('keydown', this._esc);
+    reset();
+  }
+  componentWillUnmount() {
+    clearTimeout(this._idleT);
+    window.removeEventListener('keydown', this._esc);
+    ['mousemove','keydown','pointerdown','scroll','touchstart'].forEach(e => window.removeEventListener(e, this._reset));
+  }
+  newChild() {
+    const m = location.hash.match(/new=([^&]+)/); if (!m) return null;
+    try { return JSON.parse(decodeURIComponent(m[1])); } catch (e) { return null; }
+  }
+  radar(needs, setting, home) {
+    const cx = 240, cy = 190, R = 125, n = 5;
+    const xy = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; const r = R * v / 10; return { x: +(cx + r * Math.cos(a)).toFixed(1), y: +(cy + r * Math.sin(a)).toFixed(1) }; };
+    const pt = (i, v) => { const p = xy(i, v); return p.x + ',' + p.y; };
+    const ring = v => Array.from({ length: n }, (_, i) => pt(i, v)).join(' ');
+    const poly = s => s.map((v, i) => pt(i, v)).join(' ');
+    const pts = s => s.map((v, i) => xy(i, v));
+    const out = { r2: ring(2), r4: ring(4), r6: ring(6), r8: ring(8), r10: ring(10), needs: poly(needs), setting: poly(setting), home: poly(home), needsPts: pts(needs), settingPts: pts(setting), homePts: pts(home) };
+    for (let i = 0; i < n; i++) { const p = xy(i, 10); out['ax' + i + 'x'] = p.x; out['ax' + i + 'y'] = p.y; }
+    return out;
+  }
+  renderVals() {
+    const nc = this.newChild();
+    const lvName = { universal: 'Universal', targeted: 'SEN support', enhanced: 'Enhanced', ehcp: 'EHCP' };
+    const child = nc ? {
+      name: nc.name, meta: nc.meta, level: lvName[nc.level] || 'Level not set', dob: nc.dob, id: 'VS-' + (21500 + (nc.name.length * 37) % 400), school: nc.meta.split(' · ')[1], teacher: ['R. Mensah','T. Begum','J. Okoro','L. Patel','S. Hughes'][nc.name.length % 5], status: 'New profile',
+      nextReview: 'Not set', reviewNote: 'Set a review date once the plan is agreed with family.', lastReview: 'None', guardianName: nc ? (nc.guardian || 'Not recorded') : 'Mrs Chiamaka Okafor', guardianRel: nc ? 'Parent' : 'Mother', guardianPhone: nc ? 'Not recorded' : '07700 900 312', guardianEmail: nc ? 'Not recorded' : 'c.okafor@example.com', guardianPref: nc ? 'Not recorded' : 'Phone, after 3.30pm', guardianLang: nc ? 'English' : 'English and Igbo', planNote: 'No plan yet',
+    } : {
+      name: 'Amara Okafor', meta: 'Year 4 · Oakfield Primary', level: 'SEN support', dob: '14 Mar 2017', id: 'VS-20481', school: 'Oakfield Primary', teacher: 'R. Mensah', status: 'Active',
+      nextReview: '12 Nov 2026', reviewNote: 'In 4 weeks. Family invited, teacher input due 5 Nov.', lastReview: '15 Jul 2026', guardianName: nc ? (nc.guardian || 'Not recorded') : 'Mrs Chiamaka Okafor', guardianRel: nc ? 'Parent' : 'Mother', guardianPhone: nc ? 'Not recorded' : '07700 900 312', guardianEmail: nc ? 'Not recorded' : 'c.okafor@example.com', guardianPref: nc ? 'Not recorded' : 'Phone, after 3.30pm', guardianLang: nc ? 'English' : 'English and Igbo', planNote: 'Autumn term 2026 · 3 targets',
+    };
+    const first = child.name.split(' ')[0];
+    const types = ['All','Profile viewed','Plan updated','Note added','Meeting with family','Referral sent','Review completed','Document uploaded'];
+    const all = [
+      {type:'Profile viewed', title:'Profile viewed', detail:'Teacher view opened from the class list.', who:'R. Mensah', when:'Today, 08:42', dot:'#FFFFFF'},
+      {type:'Note added', title:'Note added', detail:'"Amara used the visual timetable unprompted all week. Transitions much calmer."', who:'R. Mensah', when:'Yesterday', dot:'#1E4A40'},
+      {type:'Plan updated', title:'Plan updated', detail:'Target 2 strategy changed to two-step instructions with check-in.', who:'you', when:'6 Oct', dot:'#1E4A40'},
+      {type:'Document uploaded', title:'Document uploaded', detail:'Speech and language report, Sept 2026.', who:'you', when:'2 Oct', dot:'#1E4A40'},
+      {type:'Meeting with family', title:'Meeting with family', detail:'Termly catch-up with Mrs Okafor. Home routines shared; agreed to trial the timetable at home.', who:'you', when:'29 Sep', dot:'#1E4A40'},
+      {type:'Referral sent', title:'Referral sent', detail:'Occupational therapy referral submitted to the local authority.', who:'you', when:'18 Sep', dot:'#1E4A40'},
+      {type:'Profile viewed', title:'Profile viewed', detail:'Family view opened.', who:'Mrs Okafor', when:'16 Sep', dot:'#FFFFFF'},
+      {type:'Review completed', title:'Review completed', detail:'Summer term review signed off. Two targets met, one carried forward.', who:'you', when:'15 Jul', dot:'#1E4A40'},
+    ];
+    const domainNames = ['Communication and Interaction','Cognition and Learning','Social, Emotional and Mental Health','Physical or Sensory','Independence'];
+    const newHistory = nc ? [
+      {type:'Profile viewed', title:'Profile viewed', detail:'Opened after creating the profile.', who:'you', when:'Just now', dot:'#FFFFFF'},
+      {type:'Plan updated', title:'Needs profile drafted', detail:'CYP needs rating: ' + domainNames.map((d, i) => d + ' ' + (nc.scores || [])[i] + '/10').join(' · ') + '.', who:'you', when:'Just now', dot:'#1E4A40'},
+      {type:'Note added', title:'Profile created', detail:first + ' added from the school roll and a first profile drafted from your notes.', who:'you', when:'Just now', dot:'#1E4A40'},
+    ] : all;
+    const t = this.state.type;
+    const history = newHistory.filter(h => t === 'All' || h.type === t);
+    const typeFilters = types.map(x => ({ label: x, onClick: () => this.setState({ type: x }), color: x === t ? '#1E2622' : '#1E4A40', weight: x === t ? 700 : 400, deco: x === t ? 'underline' : 'none' }));
+    return {
+      searchOpen: this.state.searchOpen, searchRef: this.searchRef,
+      openSearch: () => this.setState({ searchOpen: true }, () => this.searchRef.current && this.searchRef.current.focus()),
+      closeSearch: () => this.setState({ searchOpen: false }),
+      first, shareOpen: this.state.shareOpen,
+      openShare: e => { e.preventDefault(); this.setState({ shareOpen: true, copied: false, shareGenerated: null, shareEmail: '' }); },
+      closeShare: () => this.setState({ shareOpen: false }),
+      shareAudiences: [
+        { key: 'family', title: 'Parent or carer', detail: 'Plain-language view, with the family voice section open.' },
+        { key: 'staff', title: 'Staff in this school', detail: 'Full plan including strategies, owners and cost.' },
+        { key: 'external', title: 'External professional', detail: 'Speech and language, EP, health. Strategies and evidence, no cost.' },
+        { key: 'la', title: 'Local authority', detail: 'Full plan and needs profile, for EHCP requests and annual review.' },
+      ].map(a => ({ ...a, on: this.state.shareAud === a.key, border: this.state.shareAud === a.key ? '#1E4A40' : '#DDD6C9', pick: () => { const presets = { family: { targets: true, strategies: true, needs: false, voice: true, cost: false, history: false }, staff: { targets: true, strategies: true, needs: true, voice: true, cost: true, history: true }, external: { targets: true, strategies: true, needs: true, voice: true, cost: false, history: false }, la: { targets: true, strategies: true, needs: true, voice: true, cost: true, history: true } }; this.setState({ shareAud: a.key, sharePerms: presets[a.key], copied: false }); } })),
+      sharePerms: [
+        { key: 'targets', title: 'Targets and outcomes', detail: 'What the plan is working towards.', locked: true },
+        { key: 'strategies', title: 'Strategies and who owns them', detail: 'Interventions, frequency and named staff.' },
+        { key: 'needs', title: 'Needs profile and radar', detail: 'Ratings across the five areas.' },
+        { key: 'voice', title: 'Child and family voice', detail: 'Quotes recorded with the child and family.' },
+        { key: 'cost', title: 'Costs and resourcing', detail: 'Estimated cost to the school.' },
+        { key: 'history', title: 'History of interactions', detail: 'Meetings, notes and referrals.' },
+      ].map(pm => ({ ...pm, on: !!this.state.sharePerms[pm.key], fg: pm.locked ? '#5A5F58' : '#1E2622', toggle: () => this.setState(s => ({ sharePerms: { ...s.sharePerms, [pm.key]: !s.sharePerms[pm.key] }, copied: false })) })),
+      shareExpiry: this.state.shareExpiry, onShareExpiry: e => this.setState({ shareExpiry: e.target.value, copied: false }),
+      sharePasscode: this.state.sharePasscode, toggleSharePasscode: () => this.setState(s => ({ sharePasscode: !s.sharePasscode, copied: false })),
+      shareUrl: 'https://vsend.example/plan/' + child.id.toLowerCase() + '-' + this.state.shareAud + '-' + Object.keys(this.state.sharePerms).filter(k => this.state.sharePerms[k]).length + 'k' + this.state.shareExpiry,
+      copyLabel: this.state.copied ? 'Copied' : 'Copy link',
+      shareEmail: this.state.shareEmail, onShareEmail: e => this.setState({ shareEmail: e.target.value }),
+      shareEmailInvalid: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.shareEmail), generateOpacity: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.shareEmail) ? 1 : 0.5,
+      shareGenerated: !!this.state.shareGenerated, shareGeneratedEmail: this.state.shareGenerated ? this.state.shareGenerated.email : '',
+      generateShare: () => { const email = this.state.shareEmail.trim(); const aud = { family: "parent", staff: "school staff", external: "external professional", la: "local authority" }[this.state.shareAud]; const secs = Object.keys(this.state.sharePerms).filter(k => this.state.sharePerms[k]).length; const days = Number(this.state.shareExpiry); const exp = new Date(Date.now() + days * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); this.setState(s => ({ shareGenerated: { email }, copied: false, shareEmail: '', sent: [{ id: 'n' + Date.now(), to: email + ' (' + aud + ')', detail: secs + ' of 6 sections · sent today · expires ' + exp, opens: 'Not opened yet', status: 'Active', endedOn: '' }].concat(s.sent) })); },
+      shareHistory: this.state.sent.concat(nc ? [] : [
+      { id: 1, to: 'Mrs Chiamaka Okafor (parent)', detail: 'Targets, strategies and family voice · sent 3 Oct 2026 · expires 2 Nov 2026', opens: 'Opened 4 times, last 18 Oct', status: 'Active', endedOn: '' },
+      { id: 2, to: 'J. Patel, speech and language therapist', detail: 'Targets, strategies and needs profile · sent 29 Sep 2026 · expires 28 Dec 2026', opens: 'Opened twice, last 6 Oct', status: 'Active', endedOn: '' },
+      { id: 3, to: 'Year 4 team (school staff)', detail: 'Full plan · sent 15 Jul 2026 · expired 14 Aug 2026', opens: 'Opened 11 times', status: 'Expired', endedOn: 'Expired 14 Aug' },
+      { id: 4, to: 'Mrs Chiamaka Okafor (parent)', detail: 'Targets and strategies · sent 2 Jun 2026', opens: 'Opened once', status: 'Revoked', endedOn: 'Revoked 9 Jun' },
+    ]).map(l => { const revokedNow = this.state.revoked.includes(l.id); const status = revokedNow ? 'Revoked' : l.status; const active = status === 'Active'; const tag = { Active: ['#E3EFE9', '#1E4A40'], Expired: ['#EEE9DF', '#5A5F58'], Revoked: ['#F9E0DC', '#8A2A1D'] }[status]; return { ...l, status, active, inactive: !active, endedOn: revokedNow ? 'Revoked today' : l.endedOn, tagBg: tag[0], tagFg: tag[1], revoke: () => this.setState(s => ({ revoked: s.revoked.concat(l.id) })) }; }),
+      shareHistNote: (nc && !this.state.sent.length) ? 'No links sent yet.' : (() => { const n = (nc ? 0 : 2) + this.state.sent.length - this.state.revoked.length; return n + ' active · revoking stops a link working straight away'; })(),
+      copyShare: () => { const url = 'https://vsend.example/plan/' + child.id.toLowerCase(); if (navigator.clipboard) navigator.clipboard.writeText(url).catch(() => {}); this.setState({ copied: true }); },
+      shareSummary: (() => { const n = Object.keys(this.state.sharePerms).filter(k => this.state.sharePerms[k]).length; const days = { '7': '7 days', '30': '30 days', '90': '90 days' }[this.state.shareExpiry]; return 'Shares ' + n + ' of 6 sections for ' + days + (this.state.sharePasscode ? ', passcode required.' : ', no passcode.'); })(),
+      sunRef: this.sunRef, sunRef2: this.sunRef2, sunRef3: this.sunRef3,
+      query: this.state.query, onQuery: e => this.setState({ query: e.target.value }),
+      history, historyEmpty: history.length === 0, typeFilters,
+      profileHref: "child.html" + location.hash,
+      planStats: [
+        { n: '3', label: 'Targets', detail: '2 on track, 1 to review' },
+        { n: '5', label: 'Interventions', detail: '3 working, 1 partly, 1 too early to say' },
+        { n: '£830', label: 'Cost this term', detail: 'TA time and ELSA sessions' },
+        { n: '12 Nov', label: 'Next review', detail: 'Family invited, teacher input 5 Nov' },
+      ],
+      planTargets: [
+        { n: 1, title: 'Follow two-step instructions independently', success: 'Completes a two-part instruction without an adult repeat on four days out of five.', need: 'Communication and Interaction · 6/10', pct: 70, status: 'On track' },
+        { n: 2, title: 'Read 20 high-frequency words', success: 'Reads all 20 words from the Year 2 list accurately in under a minute.', need: 'Cognition and Learning · 6/10', pct: 90, status: 'On track' },
+        { n: 3, title: 'Manage transitions between lessons', success: 'Moves between activities with one prompt, no more than one upset a week.', need: 'Social, Emotional and Mental Health · 4/10', pct: 40, status: 'Review' },
+      ].map(t => ({ ...t, pctLabel: t.pct + '%', pct: t.pct + '%', bg: t.status === 'On track' ? '#E3EDE9' : '#F1EADB', fg: t.status === 'On track' ? '#1E4A40' : '#5E4160', bar: t.status === 'On track' ? '#1E4A40' : '#3FA885' })),
+      provision: [
+        { title: 'Instructions given in two steps, then check in', detail: 'Teacher pauses after step one, child repeats back.', owner: 'R. Mensah', when: 'Every lesson', target: 1, done: 6, of: 7, unit: 'weeks', progress: 'Followed two-step instructions without a repeat in maths and literacy this week. Still needs the repeat in PE and at carpet time.', last: 'R. Mensah · today', status: 'Working' },
+        { title: 'Talk Boost small group', detail: 'Structured language group, three children.', owner: 'L. Patel (TA)', when: '3 × 20 min a week', target: 1, done: 14, of: 30, unit: 'sessions', progress: 'Baseline 11/30 on the Talk Boost tracker, now 19/30. Sequencing stories has improved most.', last: 'L. Patel · Friday', status: 'Working' },
+        { title: 'Daily five-minute flashcards', detail: 'School and home pack. Words rotated weekly.', owner: 'R. Mensah · Mrs Okafor', when: 'Daily', target: 2, done: 32, of: 35, unit: 'days', progress: '18 of 20 high-frequency words secure, up from 9 at the start of term. Home pack used most evenings.', last: 'L. Patel · yesterday', status: 'Working' },
+        { title: 'Visual timetable and two-minute warning', detail: 'On her desk; adult gives a warning before each change.', owner: 'T. Begum (TA)', when: 'Every transition', target: 3, done: 5, of: 7, unit: 'weeks', progress: 'Upsets down from 4 to 2 a week. Warning helps in the morning; after lunch it is not enough on its own.', last: 'T. Begum · 10 Oct', status: 'Partly working' },
+        { title: 'ELSA sessions', detail: 'Six-week block on recognising and naming feelings.', owner: 'J. Okoro (ELSA)', when: 'Weekly, 30 min', target: 3, done: 2, of: 6, unit: 'sessions', progress: 'Two sessions in. Can name happy, sad and cross; not yet using the feelings scale in class.', last: 'J. Okoro · 14 Oct', status: 'Too early to say' },
+      ].map(p => { const pct = Math.round(p.done / p.of * 100); const tone = { 'Working': ['#E3EDE9', '#1E4A40', '#1E4A40'], 'Partly working': ['#FBF4E6', '#7A4E00', '#3FA885'], 'Too early to say': ['#EEE9DF', '#5A5F58', '#B5AE9F'], 'Not working': ['#F6E1DD', '#8A2A1C', '#E0584A'] }[p.status]; return { ...p, delivered: p.done + ' of ' + p.of + ' ' + p.unit, pct: pct + '%', bg: tone[0], fg: tone[1], bar: tone[2], lastNote: 'Last update ' + p.last }; }),
+      progressLog: [
+        { target: 1, who: 'R. Mensah', when: 'Today', note: 'Used the visual timetable unprompted all week. Followed two-step instructions in maths without a repeat.' },
+        { target: 2, who: 'L. Patel', when: 'Yesterday', note: '18 of 20 words now secure. “Because” and “people” still slow.' },
+        { target: 3, who: 'T. Begum', when: '10 Oct', note: 'Two upsets this week, both after lunch. Warning helped on Tuesday, not on Thursday.' },
+        { target: 1, who: 'Mrs Okafor', when: '6 Oct', note: 'Trying the two-step approach at home for getting ready in the morning. Going well.' },
+      ],
+      targetsEmpty: !!nc, hasPlan: !nc, docsEmpty: !!nc, child, planHref: 'plan.html' + location.hash, planLabel: nc ? 'Create plan' : 'Edit plan',
+      voiceNote: nc ? ([nc.cv, nc.pv].filter(v => !v).length === 0 ? 'Both captured' : [nc.cv, nc.pv].filter(v => !v).length === 2 ? 'Both missing' : (nc.cv ? 'Parent or carer voice missing' : first + "'s voice missing")) : 'Captured this term',
+      voiceBg: nc && (!nc.cv || !nc.pv) ? '#FBF4E6' : '#E3EDE9', voiceFg: nc && (!nc.cv || !nc.pv) ? '#7A4E00' : '#1E4A40',
+      voices: nc ? [
+        nc.cv ? { title: first + "'s voice", when: 'Today · with you', has: true, empty: false, quote: '“' + nc.cv + '”', detail: 'Added when the profile was drafted.', action: 'Update' } : { title: first + "'s voice", when: '', has: false, empty: true, prompt: 'What matters to ' + first + ', what helps, what they find hard, in their own words or drawings.', action: "Add " + first + "'s voice" },
+        nc.pv ? { title: 'Parent or carer voice', when: 'Today · with you', has: true, empty: false, quote: '“' + nc.pv + '”', detail: 'Added when the profile was drafted.', action: 'Update' } : { title: 'Parent or carer voice', when: '', has: false, empty: true, prompt: 'What the family notice at home, what they are worried about and what they hope for.', action: 'Add parent or carer voice' },
+      ] : [
+        { title: "Amara's voice", when: '29 Sep · with R. Mensah', has: true, empty: false, quote: '“I like it when I know what is coming next. The timetable helps. I don’t like it when it is loud at lunch.”', detail: 'Captured using the one-page profile prompts. Amara chose to draw her quiet space and the timetable.', action: 'Update' },
+        { title: 'Parent or carer voice', when: '29 Sep · Mrs Okafor', has: true, empty: false, quote: '“She is much calmer on days when she knows the plan. Bedtimes are still hard since the move.”', detail: 'Shared at the termly catch-up. Mrs Okafor would like the timetable at home and more notice of changes.', action: 'Update' },
+      ],
+      radar: (() => { const s = nc && nc.scores ? nc.scores : [6, 6, 4, 4, 3]; const setting = [6,7,4,5,6]; const home = s.map((v, i) => Math.max(0, Math.min(10, v + [-2, 0, 1, 3, 1][i]))); return this.radar(s, setting, home); })(),
+      hasNeeds: true, needs: (nc && nc.scores ? nc.scores : [6, 6, 4, 4, 3]).map((s, i) => ({ name: domainNames[i], score: s, pct: (s * 10) + '%' })),
+      ciRatings: nc && nc.ci ? nc.ci.map(([label, band]) => ({ label, band })) : [],
+      targets: nc ? [] : [
+        {title:'Follow two-step instructions independently', strategy:'Instructions given in two steps, then check in.', owner:'R. Mensah', status:'On track', bg:'#E3EDE9', fg:'#1E4A40'},
+        {title:'Read 20 high-frequency words', strategy:'Daily five-minute flashcards; home pack shared.', owner:'R. Mensah', status:'On track', bg:'#E3EDE9', fg:'#1E4A40'},
+        {title:'Manage transitions between lessons', strategy:'Visual timetable; two-minute warning before changes.', owner:'T. Begum', status:'Review', bg:'#F1EADB', fg:'#5E4160'},
+      ],
+      docs: nc ? [] : [
+        {name:'Speech and language report', meta:'PDF · 2 Oct 2026 · uploaded by you'},
+        {name:'Summer term review', meta:'PDF · 15 Jul 2026 · signed'},
+        {name:'One-page profile', meta:'DOCX · 3 Jun 2026 · family contributed'},
+        {name:'Baseline assessment', meta:'PDF · 12 Jan 2026'},
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
